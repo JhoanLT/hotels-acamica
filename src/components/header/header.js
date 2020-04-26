@@ -14,7 +14,8 @@ const Header = ({ title, filters: { availabilityFrom, availabilityTo } }) => {
 
 	let message = "";
 	if (dayFrom === "Invalid date") {
-		message = "No ha seleccionado un rango de fechas válido";
+		message =
+			"Introduce las fechas de viaje para ver las mejores ofertas de hoteles para tus necesidades de alojamiento.";
 	} else if (dayTo === "Invalid date") {
 		message = `desde el ${dayFrom}`;
 	} else {
