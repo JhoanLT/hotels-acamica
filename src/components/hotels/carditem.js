@@ -4,7 +4,13 @@ import {
 	MdAirlineSeatIndividualSuite,
 	MdAttachMoney,
 } from "react-icons/md";
+import PropTypes from "prop-types";
 
+/**
+ * Card component for each item
+ * @author Jhoan Lopez <jhoanlt19@gmail.com>
+ * @param {*} param0
+ */
 const CardItem = ({ item }) => (
 	<div className="card">
 		<div className="card-image">
@@ -53,5 +59,20 @@ const CardItem = ({ item }) => (
 		</div>
 	</div>
 );
+
+CardItem.propTypes = {
+	item: PropTypes.shape({
+		availabilityFrom: PropTypes.number,
+		availabilityTo: PropTypes.number,
+		city: PropTypes.string,
+		country: PropTypes.string,
+		description: PropTypes.string,
+		name: PropTypes.string,
+		photo: PropTypes.string,
+		price: PropTypes.number,
+		rooms: PropTypes.number,
+		slug: PropTypes.string,
+	}),
+};
 
 export default CardItem;
